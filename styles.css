@@ -1,0 +1,306 @@
+:root {
+  color-scheme: light;
+  --background: #f8f7f2;
+  --surface: #ffffff;
+  --text: #142b3b;
+  --muted: #4f6170;
+  --border: #dce4e3;
+  --accent: #116b69;
+  --accent-soft: #e7f2ef;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Segoe UI", Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+.page-shell {
+  width: min(100% - 3rem, 1050px);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.7rem;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.site-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.site-label span {
+  padding: 0 0.3rem;
+  color: var(--accent);
+}
+
+main {
+  flex: 1;
+}
+
+.intro {
+  padding: clamp(4.5rem, 10vw, 8rem) 0 clamp(4.5rem, 9vw, 7rem);
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 850px;
+  margin-bottom: 1.2rem;
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.1;
+}
+
+.title-dash {
+  color: var(--accent);
+}
+
+.intro-copy {
+  max-width: 560px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+}
+
+.apps-section {
+  padding-bottom: 7rem;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 0.25rem;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.2;
+}
+
+.app-count {
+  padding-bottom: 0.15rem;
+  color: var(--muted);
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.app-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.app-card {
+  display: flex;
+  gap: clamp(1.4rem, 3vw, 2.5rem);
+  align-items: flex-start;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  background: var(--surface);
+  box-shadow: 0 12px 35px rgb(20 43 59 / 4%);
+}
+
+.app-icon-placeholder {
+  display: flex;
+  flex: 0 0 clamp(6rem, 14vw, 8rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: clamp(6rem, 14vw, 8rem);
+  aspect-ratio: 1;
+  border: 1px dashed #93b9b4;
+  border-radius: 1.35rem;
+  background: var(--accent-soft);
+  color: var(--accent);
+  text-align: center;
+}
+
+.icon-glyph {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.icon-placeholder-label {
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.app-content {
+  min-width: 0;
+  flex: 1;
+}
+
+.app-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.platform-tag {
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.app-description {
+  max-width: 600px;
+  margin-bottom: 1.4rem;
+  color: var(--muted);
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.pending-link {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.pending-note {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+a.app-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 0.5rem;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+a.app-link:hover {
+  background: var(--accent-soft);
+}
+
+a.app-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  padding: 1.5rem 0 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.contact-placeholder {
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .page-shell {
+    width: min(100% - 2rem, 1050px);
+  }
+
+  .site-header {
+    padding: 1.3rem 0;
+  }
+
+  .intro {
+    padding: 4.2rem 0 4.8rem;
+  }
+
+  .apps-section {
+    padding-bottom: 4.5rem;
+  }
+
+  .app-card {
+    flex-direction: column;
+  }
+
+  .app-icon-placeholder {
+    flex-basis: auto;
+  }
+}
